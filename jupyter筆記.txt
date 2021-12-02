@@ -1,0 +1,7 @@
+import requests
+import pandas as pd
+df=pd.read_csv(C:\Users\ASUS\Desktop\各年度縣市房價比.csv)
+print(df)
+
+dh.to_csv('各年度縣市房價比2.csv',encoding='utf-8-sig',index=False)
+index=False 可以不讓csv檔出現編號

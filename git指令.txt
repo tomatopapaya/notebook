@@ -1,0 +1,126 @@
+1.版本
+git version
+
+2.設定全域變數
+git config --global user.name jerry
+git config --global user.email 17app001@gmail.com
+
+3.取得設定資訊
+git config --list
+
+4.清除螢幕
+cls
+clear(linux)
+
+5.git bash 
+
+6.清空floder
+
+7.git init
+.git
+
+8.git config -l(全域)
+
+9.cat .git/config(linux)
+
+10.設定區域使用者
+git config  user.name demo
+git config  user.email demo@gmail.com
+
+11.新增檔案
+echo test2 > test2.txt
+U==>untrack (未被追蹤)
+
+12.git status (控管狀態)
+
+13.
+[1]git add test1.txt ==>objects
+U==>A (added)
+
+[2]git add . ==>一次加入控管
+
+
+14.git cat-file -t b90945 
+-t (型態)
+-p (內容)
+
+15.控管的檔案跟sha-1編碼
+git ls-files -s 
+
+
+
+(將控管的檔案加入倉庫)
+16.commit
+
+//需要先add
+git commit -m "frist commit"
+
+//add+modify
+git commit -am "2rd commit"
+
+
+
+17.
+restore指令
+1.git restore test1.txt (恢復修改的檔案)
+2.git restore --staged test1.txt (A,M==>untrack)
+
+
+18.
+rm指令
+1.git rm test1.txt (檔案刪除)==>commit後刪除
+3.add狀態後反悔(A==>untrack)
+18.git rm --cache test1.txt
+
+19.
+git log
+git log --online
+git shortlog
+git log --stat (詳細的修改資訊)
+
+
+
+20.branch
+
+[1]git branch test
+[2]git checkout test
+[3]add dev1.txt
+[4]git add dev1.txt
+[5]git commit -m "test.add dev1.txt"
+[6]git log
+[7]git branch
+[8]git branch -D test
+[9]git checkout -b dev
+
+
+
+21.merge合併(主分支跟其他分支)
+
+22.git reflog查找目前所有object
+
+
+//GITHUB
+
+23.
+[1]git remote add origin https://github.com/17app001/git-demo1.git
+
+[2]git push --set-upstream origin master
+
+//更新
+
+[3]git add . 
+
+[4]git commit -m "update!"
+
+[5]git push
+
+
+24.
+//完整複製專案(包含.git)
+git clone https://github.com/17app001/git-demo1.git
+
+
+
+
+
+

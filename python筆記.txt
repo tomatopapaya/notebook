@@ -1,0 +1,49 @@
+list[],tuple()有排序
+eval()會變成int
+str+str= str(type)
+int+str= str(type)
+int+int=int(type)
+python註解用#
+
+
+tuple()不可更動
+
+
+set{}沒有排序
+加入:
+union
+update
+
+intersation()交集 #一樣的部分
+intersation_update 加入並更改原本的Set
+symmetric_difference()差集 #兩個圓把交集的部份去掉
+isdisjoint()是否都不一樣
+issubset()是否為子集合 #sub為子
+issuperset()是否為父集合 #super為父
+
+dictionary字典 #{key:value}
+keys() 只取key值   #如有新加入的值也會一併輸出
+values() 只取values值  #如有新加入的值也會一併輸出
+items() 像tuples轉成list
+get(key) 取key裡面的value
+if key in thisdict:  #判斷key是否存在並印出
+   print("    ")
+pop() 抓取
+copy() 複製
+dict() 
+dict.fromkey(x,y) 填入key x and value y
+
+lamda 一個小函數
+iter 跌代器	
+
+from aa import bb 和JAVA的 import aa.bb; 一樣
+
+raise手動拋出例外不會跑後面的
+try 
+except
+finally
+format {}填入
+
+_init_  類別的建構函式
+
+with open的用法是不用特別 close

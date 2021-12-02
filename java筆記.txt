@@ -1,0 +1,51 @@
+void main 可以直接無視物件呼叫直接開始方法
+static 可以不用物件呼叫 (無須物件實體即可叫用)
+protect 方法必須要繼承才能使用
+private 必須要在類別裡面執行
+final int x=10 (加上"final"關鍵字,變數一旦指定了值,便不能更改)
+java.util.scanner (System.in)  hasNext()//確定是否還有要輸入的值  然後next()輸出or nextLine()
+%.f 取小數會四捨五入到最後一位
+
+extend繼承
+如果要叫用父類別的方法 要先設一個空()的方法
+叫用必須先做父類別的東西 
+例( Super.name = X;
+    y=1;   
+  )
+
+this.
+
+String=""; String=null; 後者會輸出null
+
+數字字串轉數值
+int 變數 = Integer.parseInt(數字字串)
+數值轉字串
+String 字串 = Integer.toString(整數值)
+String 字串 = String.valueof(數值)
+
+陣列輸入 array arraylist
+
+extends繼承(補充)
+
+class a{
+}
+class b extends a{
+}
+public class{
+   public static void main(String args[])
+   {
+	此地方才能設定元素
+   }
+}
+
+判斷大小寫方法
+Character.isLowerCase(字母)
+Character.isUpperCase(字母)
+
+改大小寫
+Character.toUpperCase(字母)
+Character.toLowerCase(字
+
+字串顛倒 reverse() 是 StringBuilder 的語法所以用法必須先用此令
+StrinBuilder str1 = new StringBuilder();
+str1.reverse().toString()   因為是char所以要轉成String

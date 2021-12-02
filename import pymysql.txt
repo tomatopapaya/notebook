@@ -1,0 +1,11 @@
+import pymysql
+import charts
+# 資料庫參數設定
+db_settings = {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "root",
+    "password": "orange0832",
+    "db": "taiwan_house_price",
+    "charset": "utf8"
+}       

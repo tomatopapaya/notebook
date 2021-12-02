@@ -1,0 +1,168 @@
+//登入語法
+mysql -u root --password
+
+//建立資料庫
+create database demo1;//utf8-mb4
+create database demo2 character set utf8;
+
+//檢視目前所有資料庫
+show databases;
+
+//檢視資料庫建立語法
+show create database demo2;
+
+//刪除資料庫
+drop database demo1;
+drop database if exists demo2;
+
+//修改資料庫
+alter database  demo1 character set big5;  
+
+/**-----------------
+/*建立資料表
+**------------------/
+
+use demo1;
+
+create table emd(
+id int,
+name varchar(20),
+sex char(1),
+birthday date,
+entry_date datetime,
+job varchar(50),
+salary float,
+resume text
+);
+
+//檢視所有資料表
+show tables;
+
+//檢視資料表欄位名稱(describe)
+desc emp;
+
+//增加欄位(field)
+alter table emd add image blob;
+
+//修改
+alter table emd modify job varchar(60);
+
+//刪除欄位
+alter table emd drop sex;
+
+//更改檔名稱
+rename table emd to user; 
+
+//編碼修改
+alter table emd character set utf8;
+
+//修改欄位名稱
+alter table emd change column name username varchar(20);
+
+//刪除資料表
+drop table user;
+
+//插入資料
+insert into emd values(1,'Danny',"FM","1987-09-23","2021-9-3 13:19:20","PROGRAMMER",58888.8,"Java/c#");
+
+
+create table student(
+id int,
+name varchar(20),
+sex char(1),
+chinese float,
+math float,
+english float
+);
+//插入資料
+insert into student values(1,'Danny',"M",80,88,90);
+
+//修改欄位
+alter table student modify id int primary key auto_increment;
+
+//修改增加主見跟自動增加
+alter table student change column id sid int primary key auto_increment;
+
+//不能為空
+alter table student modify name varchar(20) not null;
+
+//預測值
+alter table student modify sex char(1) default "M";
+
+//不能重複
+alter table student modify name varchar(20) not null unique;
+
+
+第二章
+//CRUD
+
+Create==>建立(insert into)
+
+use demo1;
+
+alter table emd modify id int primary key auto_increment;
+
+
+//Update ==>更新(update set column=?)
+
+//整筆資料進行更新
+update emp set salary=60000;
+
+//一次更新多個資料
+update emp set salary=80000,job="no.1 programmer" where name="jerry";
+
+//&&==>and || ==>or
+update emd set entry_date="2021-9-3 16:00:00" where id>=3 and id<=8;
+
+//========================================
+//Delete==>刪除(delete from table where=?)
+//========================================
+delete from emp where name="tom";
+
+//比對null使用is
+delete from emp where job is null;
+
+//刪除資料表內所有資料
+delete from emp;
+
+//自動更新日期
+update emp set entry_date = CURRENT_TIMESTAMP where id=1;
+alter table emp modify entry_date timestamp;
+
+//===========================================
+//Select ==>篩選(select ? from table where=?)
+//===========================================
+select * from student;
+select name,english from student;
+select name from student where chinese>=80 and english>=80;
+//不重覆值篩選
+select distinct deptName from student;
+
+select count(distinct deptName) from student;
+
+select name,chinese+english+math as '總分'from student;
+
+select name,english from student where english>=80 and english<=100;
+
+//between 80<=english<=100
+select name,english from student where  english between 80 and 100;
+// in 查找指定得值	
+select name,math from student where math in (90,67,100);
+//模糊查詢(%_)
+select * from student where name like '李%';
+select * from student where name like '李_';
+
+
+//排序
+select name,chinese+english+math as '總分'from student order by (chinese+english+math);
+select name,chinese+english+math as '總分'from student where name like '李%' order by (chinese+english+math) desc;
+
+//程式練習
+
+//記數
+select count(*) from employee;
+
+//格式化
+select title,count(title) from emp group by title;
+
+//select * from emp where salary=any(select max(salary))from emp group by title)order by salary desc;

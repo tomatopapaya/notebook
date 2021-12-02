@@ -1,0 +1,38 @@
+出現中文亂碼時
+輸入: set names big5;
+關閉mysql
+net stop mysql5
+開啟
+net start mysql5
+
+inner join:
+
+SELECT customers.Name, orders.Order_No
+FROM customers
+INNER JOIN orders
+ON customers.C_Id=orders.C_Id;
+
+計算幾筆資料
+select count(*) from 
+
+不重複要加上distinct
+
+從小到大排列
+order by 欄位
+大到小
+order by 欄位 desc
+
+選取投幾個
+limit 個數
+
+取最大最小
+max(欄位) 
+min(欄位)
+
+計算總金額
+sum(金額)
+
+且&& 或||
+
+查找日期
+where date標題 between '時間' and '時間';
