@@ -10,7 +10,7 @@ inner join:
 SELECT customers.Name, orders.Order_No
 FROM customers
 INNER JOIN orders
-ON customers.C_Id=orders.C_Id;
+where customers.C_Id=orders.C_Id;
 
 計算幾筆資料
 select count(*) from 
@@ -38,3 +38,6 @@ sum(金額)
 where date標題 between '時間' and '時間';
 
 不小心打' 記得給另一個'; 就可以了
+
+合併兩個相同欄位的table
+select * from table1 union select * from table2;
