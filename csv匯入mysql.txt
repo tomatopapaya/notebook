@@ -1,0 +1,22 @@
+create table price(
+年分 varchar(255),
+縣市 varchar(255),
+房貸負擔率_趴 varchar(255),
+房貸負擔率_百分點_季變動值 varchar(255),
+房貸負擔率_百分點_年變動值 varchar(255),
+房價所得比_倍 varchar(255),
+房價所得比_倍_季變動值 varchar(255),
+房價所得比_倍_年變動值 varchar(255))
+DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;;
+
+
+
+LOAD DATA INFILE 'C:/Users/ASUS/Desktop/台北餐廳.csv' 
+INTO TABLE search
+CHARACTER SET big5
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+CHARACTER SET UTF8

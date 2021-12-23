@@ -1,0 +1,3 @@
+find(class_=  後面有時候會有空白記得去掉)不然會找不到
+url=r'http\XXX\XXX'   r的功用是\不會替代值
+url=f'http//xxx/xxx/{}/{}/'  f的功用是{}是可以變換的值 
